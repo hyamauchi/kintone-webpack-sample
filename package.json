@@ -1,0 +1,29 @@
+{
+  "name": "kintone-webpack-sample",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/main.bundle.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "webpack-dev-server --https --content-base ./ --inline",
+    "kintonedev": "gulp dev",
+    "kintoneprod": "gulp prod",
+    "build": "npm-run-all _clean _build:dev",
+    "package": "npm-run-all _clean _build:prod kintoneprod",
+    "_clean": "rimraf dist/*",
+    "_build:dev": "webpack --devtool source-map --verbose && cpx src/styles/*.css dist/",
+    "_build:prod": "webpack -p --release && cpx src/styles/*.css dist/"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "cpx": "^1.5.0",
+    "eslint": "^3.13.1",
+    "eslint-config-kintone": "^1.2.0",
+    "gulp": "^3.9.1",
+    "npm-run-all": "^4.0.1",
+    "rimraf": "^2.5.4",
+    "webpack": "^1.14.0"
+  },
+  "dependencies": {}
+}

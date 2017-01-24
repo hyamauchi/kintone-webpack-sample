@@ -1,0 +1,25 @@
+{
+  "extends": "eslint-config-kintone",
+  "installedESLint": true,
+  "env": {
+    // browser グローバル変数を使用する
+    "browser": true
+  },
+  "rules": {
+    "indent": ["off", 2],
+    "linebreak-style": ["error", "unix"],
+    "quotes": ["off", "double"],
+    "semi": ["error", "always"],
+    "space-before-function-paren": ["off", "always"],
+    "no-multi-spaces": ["error", {"exceptions": {"Property": true, "ImportDeclaration": true, "VariableDeclarator": true, "AssignmentExpression": true}}],
+    "no-trailing-spaces": "warn",
+    "no-console": "warn",
+    "curly": ["warn", "all"],
+    "strict": "warn",
+
+    "no-undefined": "warn",
+    "no-unused-vars": ["warn", {"vars": "all", "args": "after-used"}],
+    "no-undef-init": "warn",
+    "no-undef": "warn"
+  }
+}
