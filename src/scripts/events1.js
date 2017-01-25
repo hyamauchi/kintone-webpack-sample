@@ -16,7 +16,7 @@
       'app.record.edit.change.QType',
       'mobile.app.record.detail.show',
       'mobile.app.record.create.show',
-      'mobile.app.record.create.QType',
+      'mobile.app.record.create.change.QType',
       'mobile.app.record.edit.change.QType'];
 
     kintone.events.on(events1, function (event) {
